@@ -6,6 +6,7 @@ type LinkProps = {
   children: ReactNode;
   className?: string;
   underline?: boolean;
+  download?: string;
 } & NextLinkProps;
 
 export default function Link(props: LinkProps) {
@@ -17,7 +18,7 @@ export default function Link(props: LinkProps) {
       className={clsx(
         "underline-offset-4",
         (isExternal || underline) && "underline",
-        props.className
+        props.className,
       )}
       target={isExternal ? "_blank" : undefined}
     >

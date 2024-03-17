@@ -21,13 +21,13 @@ export default async function Home() {
       <div className="flex animate-in flex-col gap-8">
         <div>
           <h1 className="animate-in text-3xl font-bold tracking-tight text-primary">
-            Brian Ruiz
+            Ljubisa Stevanovic
           </h1>
           <p
             className="animate-in text-secondary"
             style={{ "--index": 1 } as React.CSSProperties}
           >
-            Software Engineer & Creator
+            Software Engineer
           </p>
         </div>
         <div
@@ -47,9 +47,8 @@ export default async function Home() {
           className="max-w-lg animate-in text-primary"
           style={{ "--index": 2 } as React.CSSProperties}
         >
-          Good evening, I&apos;m, a programmer who loves building new
-          things. In addition to coding, I also make YouTube videos,
-          where I focus on tech, creative vlogs, and personal development.
+          Hello, I&apos;m, a software developer based in Bijeljina, Bosnia &
+          Herzegovina. I love challenges and making new things.
         </p>
         <ul
           className="animated-list flex animate-in flex-col gap-2 text-secondary md:flex-row md:gap-6"
@@ -66,11 +65,12 @@ export default async function Home() {
           </li>
           <li className="transition-opacity">
             <Link
-              href="mailto:contact@b-r.io"
+              href="/cv.pdf"
+              download="cv"
               className="flex items-center gap-2 no-underline"
             >
               <ArrowUpRightIcon className="h-5 w-5" />
-              <span>Get Newsletter</span>
+              <span>Get my CV</span>
             </Link>
           </li>
         </ul>

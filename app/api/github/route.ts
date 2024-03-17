@@ -1,11 +1,11 @@
-import { NextRequest } from 'next/server';
+import { NextRequest } from "next/server";
 
 export async function GET(req: NextRequest) {
-  const searchParams = req.nextUrl.searchParams
-  const username = searchParams.get('username')
+  const searchParams = req.nextUrl.searchParams;
+  const username = searchParams.get("username");
 
   if (!username) {
-    return new Response("Please provide a username", {status: 200})
+    return new Response("Please provide a username", { status: 200 });
   }
 
   try {
@@ -15,11 +15,11 @@ export async function GET(req: NextRequest) {
     const stars = data.reduce(
       (acc: number, curr: { stargazers_count: number }) =>
         acc + curr.stargazers_count,
-      0
+      0,
     );
     return Response.json({ stars });
   } catch (err) {
     console.error(err);
-    return new Response(`Something went wrong: ${err}`, {status: 200})
+    return new Response(`Something went wrong: ${err}`, { status: 200 });
   }
 }
